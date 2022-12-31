@@ -28,13 +28,13 @@ public class IndexController {
 		m.addAttribute("sounds",sounds);
 		return "index";
 	}
-	
+		
 	
 	@RequestMapping(value = "/add_sound")
 	public String addSound(Model m) {
 		//目前無用途
 //		m.addAttribute("title","Add sound");
-		return "add_sound";
+		return "sound_add";
 	}
 	
 	@RequestMapping(value = "/handle_product", method=RequestMethod.POST)
@@ -59,6 +59,6 @@ public class IndexController {
 	public String updateFrom(@PathVariable("soundId") int pid,Model model) {
 		Sound sound=this.soundDao.getSound(pid);
 		model.addAttribute("sound",sound);
-		return "update_form";
+		return "sound_update";
 	}
 }

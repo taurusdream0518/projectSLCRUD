@@ -30,8 +30,8 @@ public class SoundDao {
 	// 刪除
 	@Transactional
 	public void deleteSound(Integer id) {
-		Sound p = this.hibernateTemplate.load(Sound.class, id);
-		this.hibernateTemplate.delete(p);
+		Sound s = this.hibernateTemplate.load(Sound.class, id);
+		this.hibernateTemplate.delete(s);
 	}
 
 	// 取得單一個product
