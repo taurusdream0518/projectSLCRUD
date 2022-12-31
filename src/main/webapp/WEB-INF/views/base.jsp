@@ -40,7 +40,7 @@ https://cdnjs.com/libraries/font-awesome/5.15.0
                 <a class="nav-link " href="sound">Sound</a>
               </li>  
               <li class="nav-item">
-                <a class="nav-link" href="#">Light</a>
+                <a class="nav-link" href="light">Light</a>
               </li>      
             </ul>
             <form class="d-flex">

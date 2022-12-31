@@ -4,7 +4,7 @@
 <html lang="en">
 
 <head>
-<title>Title</title>
+
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <%@ include file="./base.jsp"%>
@@ -18,19 +18,20 @@
 </head>
 
 <body>
-	<div class="container mt-3">
+<div class="container mt-3" style="text-align: center;">
+	<h1>庫存總覽</h1>
+</div>
+	<div class="container mt-3" >
+		<h2>音響</h2>
 		<div class="row">
-			<div class="col-md-12">
-				<h1>庫存總覽</h1>
-				<br>
+			<div class="col-md-12">		
 				<table class="table table-hover">
 					<thead class="thead-dark">
 						<tr>
 							<th scope="col"></th>
 							<th scope="col">名稱</th>
 							<th scope="col">數量</th>							
-							<th scope="col">刪除</th>
-							<th scope="col">更新</th>
+							
 						</tr>
 					</thead>
 					<tbody>
@@ -39,18 +40,39 @@
 								<!--  <th scope="row">${p.id }</th>-->
 								<th>${i.count}</th>
 								<td>${s.name }</td>
-								<td>${s.quantity}</td>
-								<td><a href="delete/${s.id}"><i
-										class="fasolidfa-trash-can" style="font-size: 18px">刪除</i></a></td>
-								<td><a href="update/${s.id}"><i
-										class="fasolidfa-file-pen" style="font-size: 18px">更新</i></a></td>
+								<td>${s.quantity}</td>								
 							</tr>
-						</c:forEach>
+						</c:forEach>								
 					</tbody>
-				</table>
-				<div class="container">
-					<a href="add_sound" class="btn btn-outlinesuccess"> Add Product</a>
-				</div>
+				</table>				
+			</div>
+		</div>
+	</div>
+
+	<div class="container mt-3">
+		<h2>燈光</h2>
+		<div class="row">
+			<div class="col-md-12">		
+				<table class="table table-hover">
+					<thead class="thead-dark">
+						<tr>
+							<th scope="col"></th>
+							<th scope="col">名稱</th>
+							<th scope="col">數量</th>							
+							
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${lights}" var="l" varStatus="i">
+							<tr>
+								<!--  <th scope="row">${p.id }</th>-->
+								<th>${i.count}</th>
+								<td>${l.name }</td>
+								<td>${l.quantity}</td>								
+							</tr>
+						</c:forEach>								
+					</tbody>
+				</table>				
 			</div>
 		</div>
 	</div>

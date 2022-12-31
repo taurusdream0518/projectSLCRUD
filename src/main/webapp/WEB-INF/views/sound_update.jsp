@@ -4,7 +4,7 @@
 <html lang="en">
 
 <head>
-<title>Title</title>
+
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport"
@@ -22,8 +22,8 @@
 	<div class="container mt-3">
 		<div class="row">
 			<div class="col-md-6 offset-md-3">
-				<h1 class="text-center mb-3">Fill the Product datail</h1>
-				<form action="${pageContext.request.contextPath}/handle_product"
+				<h1 class="text-center mb-3">Fill the Product detail</h1>
+				<form action="${pageContext.request.contextPath}/handle_sound_update"
 					method="POST">
 					<div class="form-group">
 						<input type="hidden" value="${sound.id}" name="id">
@@ -41,10 +41,10 @@
 							name="quantity" placeholder="Enter the product Quantity here"
 							required="required" value="${sound.quantity}" />
 					</div>
-					<div class="container text-conter">
-						<a href="${pageContext.request.contextPath }/"
+					<div class="container text-conter">					
+						<a href="${pageContext.request.contextPath }/sound"
 							class="btn btn-outline-danger">Back</a>
-						<button type="submit" class="btn btnprimary">update</button>
+						<button type="submit" class="btn btn-outline-success">update</button>
 					</div>
 				</form>
 			</div>

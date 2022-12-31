@@ -4,7 +4,7 @@
 <html lang="en">
 
 <head>
-<title>Title</title>
+
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <%@ include file="./base.jsp"%>
@@ -27,8 +27,8 @@
 							<th scope="col"></th>
 							<th scope="col">名稱</th>
 							<th scope="col">數量</th>							
-							<th scope="col">刪除</th>
 							<th scope="col">更新</th>
+							<th scope="col">刪除</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -38,16 +38,16 @@
 								<th>${i.count}</th>
 								<td>${s.name }</td>
 								<td>${s.quantity}</td>
-								<td><a href="delete/${s.id}"><i
-										class="fasolidfa-trash-can" style="font-size: 18px">刪除</i></a></td>
-								<td><a href="update/${s.id}"><i
-										class="fasolidfa-file-pen" style="font-size: 18px">更新</i></a></td>
+								<td><a href="update_sound/${s.id}"><i
+										class="fasolidfa-file-pen btn btn-outline-primary" style="font-size: 18px">更新</i></a></td>
+								<td><a href="delete_sound/${s.id}"><i
+										class="fasolidfa-trash-can btn btn-outline-danger" style="font-size: 18px">刪除</i></a></td>
 							</tr>
 						</c:forEach>
 					</tbody>
 				</table>
 				<div class="container">
-					<a href="add_sound" class="btn btn-outlinesuccess"> Add Product</a>
+					<a href="add_sound" class="btn btn-outline-primary"> Add Product</a>
 				</div>
 			</div>
 		</div>

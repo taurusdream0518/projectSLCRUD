@@ -4,7 +4,7 @@
 <html lang="en">
 <%@ include file="./base.jsp"%>
 <head>
-<title>Title</title>
+
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport"
@@ -20,24 +20,24 @@
 	<div class="container mt-3">
 		<div class="row">
 			<div class="col-md-6 offset-md-3">
-				<h1 class="text-center mb-3">Fill the Product datail</h1>
-				<form action="handle_product" method="POST">
+				<h1 class="text-center mb-3">新增音響設備</h1>
+				<form action="handle_sound_add" method="POST">
 					<div class="form-group">
 						<label for="name">Product Name</label> <input type="text"
 							class="form-control" id="name" name="name"
 							placeholder="Enter the product name here" required="required">
 					</div>
 					<div class="form-group">
-						<label for="quantity">Product Qquantity</label>
+						<label for="quantity">Product Quantity</label>
 						<textarea class="form-control" id="quantity"
 							aria-describedby="emailHelp" name="quantity" 
 							placeholder="Enter the product Quantity here"
 							required="required"></textarea>
 					</div>					
 					<div class="container text-conter">
-						<a href="${pageContext.request.contextPath }/"
+						<a href="${pageContext.request.contextPath }/sound"
 							class="btn btn-outline-danger">Back</a>
-						<button type="submit" class="btn btnprimary">Add</button>
+						<button type="submit" class="btn btn-outline-success">Add</button>
 					</div>
 				</form>
 			</div>
