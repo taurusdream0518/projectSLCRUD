@@ -17,6 +17,11 @@
 	rel="stylesheet">
 </head>
 
+<style type="text/css">
+	.c1{width: 20px;}
+	.c2{width: 500px;}
+	.c3{width: 50px;}
+</style>
 <body>
 <div class="container mt-3" style="text-align: center;">
 	<h1>庫存總覽</h1>
@@ -28,9 +33,9 @@
 				<table class="table table-hover">
 					<thead class="thead-dark">
 						<tr>
-							<th scope="col"></th>
-							<th scope="col">名稱</th>
-							<th scope="col">數量</th>							
+							<th class="c1" scope="col"></th>
+							<th class="c2" scope="col">名稱</th>
+							<th class="c3" style="text-align: center;" scope="col">數量</th>							
 							
 						</tr>
 					</thead>
@@ -38,9 +43,9 @@
 						<c:forEach items="${sounds}" var="s" varStatus="i">
 							<tr>
 								<!--  <th scope="row">${p.id }</th>-->
-								<th>${i.count}</th>
+								<th style="text-align: center;">${i.count}</th>
 								<td>${s.name }</td>
-								<td>${s.quantity}</td>								
+								<td style="text-align: center;">${s.quantity}</td>								
 							</tr>
 						</c:forEach>								
 					</tbody>
@@ -56,9 +61,9 @@
 				<table class="table table-hover">
 					<thead class="thead-dark">
 						<tr>
-							<th scope="col"></th>
-							<th scope="col">名稱</th>
-							<th scope="col">數量</th>							
+							<th class="c1" scope="col"></th>
+							<th class="c2" scope="col">名稱</th>
+							<th class="c3" style="text-align: center;"scope="col">數量</th>								
 							
 						</tr>
 					</thead>
@@ -66,9 +71,9 @@
 						<c:forEach items="${lights}" var="l" varStatus="i">
 							<tr>
 								<!--  <th scope="row">${p.id }</th>-->
-								<th>${i.count}</th>
+								<th style="text-align: center;">${i.count}</th>
 								<td>${l.name }</td>
-								<td>${l.quantity}</td>								
+								<td style="text-align: center;">${l.quantity}</td>								
 							</tr>
 						</c:forEach>								
 					</tbody>

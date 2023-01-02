@@ -15,6 +15,14 @@
 	rel="stylesheet">
 </head>
 
+<style type="text/css">
+	.c1{width: 20px;}
+	.c2{width: 500px;}
+	.c3{width: 50px;}
+	.c4{width: 50px;}
+	.c5{width: 50px;}
+</style>
+
 <body>
 <div class="container mt-3">
 		<div class="row">
@@ -24,30 +32,30 @@
 				<table class="table table-hover">
 					<thead class="thead-dark">
 						<tr>
-							<th scope="col"></th>
-							<th scope="col">名稱</th>
-							<th scope="col">數量</th>							
-							<th scope="col">更新</th>
-							<th scope="col">刪除</th>
+							<th class="c1" scope="col"></th>
+							<th class="c2" scope="col">名稱</th>
+							<th class="c3" style="text-align: center"; scope="col">數量</th>							
+							<th class="c4" style="text-align: center"; scope="col">更新</th>
+							<th class="c5" style="text-align: center"; scope="col">刪除</th>
 						</tr>
 					</thead>
 					<tbody>
 						<c:forEach items="${sounds}" var="s" varStatus="i">
 							<tr>
 								<!--  <th scope="row">${p.id }</th>-->
-								<th>${i.count}</th>
+								<th style="text-align: center">${i.count}</th>
 								<td>${s.name }</td>
-								<td>${s.quantity}</td>
-								<td><a href="update_sound/${s.id}"><i
+								<td style="text-align: center">${s.quantity}</td>
+								<td style="text-align: center"><a href="update_sound/${s.id}"><i
 										class="fasolidfa-file-pen btn btn-outline-primary" style="font-size: 18px">更新</i></a></td>
-								<td><a href="delete_sound/${s.id}"><i
+								<td style="text-align: center"><a href="delete_sound/${s.id}"><i
 										class="fasolidfa-trash-can btn btn-outline-danger" style="font-size: 18px">刪除</i></a></td>
 							</tr>
 						</c:forEach>
 					</tbody>
 				</table>
 				<div class="container">
-					<a href="add_sound" class="btn btn-outline-primary"> Add Product</a>
+					<a href="add_sound" class="btn btn-outline-primary">新增設備</a>
 				</div>
 			</div>
 		</div>

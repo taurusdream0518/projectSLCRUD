@@ -23,21 +23,21 @@
 				<h1 class="text-center mb-3">新增燈光設備</h1>
 				<form action="handle_light_add" method="POST">
 					<div class="form-group">
-						<label for="name">Product Name</label> <input type="text"
+						<label for="name">設備名稱</label> <input type="text"
 							class="form-control" id="name" name="name"
-							placeholder="Enter the product name here" required="required">
+							placeholder="輸入設備名稱" required="required">
 					</div>
 					<div class="form-group">
-						<label for="quantity">Product Quantity</label>
+						<label for="quantity">設備數量</label>
 						<textarea class="form-control" id="quantity"
 							aria-describedby="emailHelp" name="quantity" 
-							placeholder="Enter the product Quantity here"
+							placeholder="輸入設備數量"
 							required="required"></textarea>
 					</div>					
 					<div class="container text-conter">
 						<a href="${pageContext.request.contextPath }/light"
-							class="btn btn-outline-danger">Back</a>
-						<button type="submit" class="btn btn-outline-success">Add</button>
+							class="btn btn-outline-danger">返回</a>
+						<button type="submit" class="btn btn-outline-success">新增</button>
 					</div>
 				</form>
 			</div>
