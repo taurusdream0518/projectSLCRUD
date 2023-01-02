@@ -28,6 +28,5 @@ public abstract class FixtureDao<T> {
 	// 刪除
 	@Transactional
 	public abstract void deleteFixtureEntity(Integer id);
-	
 
 }
