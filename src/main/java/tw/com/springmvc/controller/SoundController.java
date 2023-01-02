@@ -27,7 +27,7 @@ public class SoundController {
 	
 	@RequestMapping(value = {"/sound"})
 	public String index(Model m) {
-		List<Sound> sounds=soundDao.getSounds();
+		List<Sound> sounds=soundDao.getFixtureEntities();
 		m.addAttribute("sounds",sounds);
 		m.addAttribute("title","Sound");
 		return "sound";
@@ -36,16 +36,18 @@ public class SoundController {
 	@RequestMapping(value = "/add_sound")
 	public String addSound(Model m) {
 		//修改頁面標題
-		m.addAttribute("title","Add sound");
+		m.addAttribute("title","Add sound");	
 		return "sound_add";
 	}
 	
 	@RequestMapping(value = "/handle_sound_add", method=RequestMethod.POST)
 	public RedirectView handleSound_add(@ModelAttribute Sound sound,HttpServletRequest request) {
-		soundDao.createSound(sound);
+		soundDao.createFixtureEntity(sound);
+			 	
 		//重轉發至頁面
 		RedirectView redirectView=new RedirectView();
 		redirectView.setUrl(request.getContextPath()+"/add_sound");
+		
 		return redirectView;
 	}
 	
@@ -53,7 +55,7 @@ public class SoundController {
 	//刪除
 	@RequestMapping("/delete_sound/{id}")
 	public RedirectView deleteSound(@PathVariable("id") int id,HttpServletRequest request) {
-		this.soundDao.deleteSound(id);
+		this.soundDao.deleteFixtureEntity(id);
 		RedirectView redirectView=new RedirectView();
 		redirectView.setUrl(request.getContextPath()+"/sound");
 		return redirectView;
@@ -69,7 +71,7 @@ public class SoundController {
 	
 	@RequestMapping(value = "/handle_sound_update", method=RequestMethod.POST)
 	public RedirectView handleSound_update(@ModelAttribute Sound sound,HttpServletRequest request) {
-		soundDao.createSound(sound);
+		soundDao.createFixtureEntity(sound);
 		//重轉發至頁面
 		RedirectView redirectView=new RedirectView();
 		redirectView.setUrl(request.getContextPath()+"/sound");

@@ -10,29 +10,20 @@ import org.springframework.transaction.annotation.Transactional;
 import tw.com.springmvc.entity.Sound;
 
 @Component
-public class SoundDao {
-	
-	@Autowired
-	private HibernateTemplate hibernateTemplate;
+public class SoundDao extends FixtureDao<Sound>{
 
-	// 新增product
-	@Transactional
-	public void createSound(Sound sound) {
-		this.hibernateTemplate.saveOrUpdate(sound);
-	}
-
-	// 取得全部product
-	public List<Sound> getSounds() {
+	@Override
+	public List<Sound> getFixtureEntities() {
 		List<Sound> sounds = this.hibernateTemplate.loadAll(Sound.class);
 		return sounds;
 	}
 
-	// 刪除
-	@Transactional
-	public void deleteSound(Integer id) {
+	@Override
+	public void deleteFixtureEntity(Integer id) {
 		Sound s = this.hibernateTemplate.load(Sound.class, id);
 		this.hibernateTemplate.delete(s);
-	}
+		
+	}	
 
 	// 取得單一個product
 	@Transactional

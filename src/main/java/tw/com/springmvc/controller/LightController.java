@@ -24,7 +24,7 @@ public class LightController {
 	
 	@RequestMapping(value = {"/light"})
 	public String index(Model m) {
-		List<Light> lights=lightDao.getLights();
+		List<Light> lights=lightDao.getFixtureEntities();
 		m.addAttribute("lights",lights);
 		m.addAttribute("title","Light");
 		return "light";
@@ -38,7 +38,7 @@ public class LightController {
 	
 	@RequestMapping(value = "/handle_light_add", method=RequestMethod.POST)
 	public RedirectView handleLight_add(@ModelAttribute Light light,HttpServletRequest request) {
-		lightDao.createLight(light);
+		lightDao.createFixtureEntity(light);
 		//重轉發至頁面
 		RedirectView redirectView=new RedirectView();
 		redirectView.setUrl(request.getContextPath()+"/add_light");
@@ -48,7 +48,7 @@ public class LightController {
 	//刪除
 	@RequestMapping("/delete_light/{id}")
 	public RedirectView deleteLight(@PathVariable("id") int id,HttpServletRequest request) {
-		this.lightDao.deleteLight(id);
+		this.lightDao.deleteFixtureEntity(id);
 		RedirectView redirectView=new RedirectView();
 		redirectView.setUrl(request.getContextPath()+"/light");
 		return redirectView;
@@ -64,7 +64,7 @@ public class LightController {
 	
 	@RequestMapping(value = "/handle_light_update", method=RequestMethod.POST)
 	public RedirectView handleLight_update(@ModelAttribute Light light,HttpServletRequest request) {
-		lightDao.createLight(light);
+		lightDao.createFixtureEntity(light);
 		//重轉發至頁面
 		RedirectView redirectView=new RedirectView();
 		redirectView.setUrl(request.getContextPath()+"/light");

@@ -29,10 +29,12 @@ public class IndexController {
 
 	@RequestMapping(value = {"/","/index"})
 	public String index(Model m) {
-		List<Sound> sounds=soundDao.getSounds();
+		List<Sound> sounds=soundDao.getFixtureEntities();
 		m.addAttribute("sounds",sounds);
-		List<Light> lights=lightDao.getLights();
+		
+		List<Light> lights=lightDao.getFixtureEntities();
 		m.addAttribute("lights",lights);
+		
 		m.addAttribute("title","Index");
 		return "index";
 	}		

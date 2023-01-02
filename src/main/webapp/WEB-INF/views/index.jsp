@@ -50,7 +50,7 @@
 	</div>
 
 	<div class="container mt-3">
-		<h2>燈光</h2>
+		<h2>燈光</h2>		
 		<div class="row">
 			<div class="col-md-12">		
 				<table class="table table-hover">
