@@ -43,12 +43,12 @@
 						<c:forEach items="${lights}" var="l" varStatus="i">
 							<tr>
 								<!--  <th scope="row">${p.id }</th>-->
-								<th style="text-align: center;">${i.count}</th>
+								<th style="text-align: center">${i.count}</th>
 								<td>${l.name }</td>
-								<td style="text-align: center;">${l.quantity}</td>
-								<td style="text-align: center;"><a href="update_light/${l.id}"><i
+								<td style="text-align: center">${l.quantity}</td>
+								<td style="text-align: center"><a href="update_light/${l.id}"><i
 										class="fasolidfa-file-pen btn btn-outline-primary" style="font-size: 18px">更新</i></a></td>
-								<td style="text-align: center;"><a href="delete_light/${l.id}"><i
+								<td style="text-align: center"><a href="delete_light/${l.id}"><i
 										class="fasolidfa-trash-can btn btn-outline-danger" style="font-size: 18px">刪除</i></a></td>
 							</tr>
 						</c:forEach>
