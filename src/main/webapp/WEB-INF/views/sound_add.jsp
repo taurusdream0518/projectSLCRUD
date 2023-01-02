@@ -4,7 +4,7 @@
 <html lang="en">
 <%@ include file="./base.jsp"%>
 <head>
-<title>Title</title>
+
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport"
@@ -20,24 +20,24 @@
 	<div class="container mt-3">
 		<div class="row">
 			<div class="col-md-6 offset-md-3">
-				<h1 class="text-center mb-3">Fill the Product datail</h1>
-				<form action="handle_product" method="POST">
+				<h1 class="text-center mb-3">新增音響設備</h1>
+				<form action="handle_sound_add" method="POST">
 					<div class="form-group">
-						<label for="name">Product Name</label> <input type="text"
+						<label for="name">設備名稱</label> <input type="text"
 							class="form-control" id="name" name="name"
-							placeholder="Enter the product name here" required="required">
+							placeholder="輸入設備名稱" required="required">
 					</div>
 					<div class="form-group">
-						<label for="quantity">Product Qquantity</label>
+						<label for="quantity">設備數量</label>
 						<textarea class="form-control" id="quantity"
 							aria-describedby="emailHelp" name="quantity" 
-							placeholder="Enter the product Quantity here"
+							placeholder="輸入設備數量"
 							required="required"></textarea>
 					</div>					
 					<div class="container text-conter">
-						<a href="${pageContext.request.contextPath }/"
-							class="btn btn-outline-danger">Back</a>
-						<button type="submit" class="btn btnprimary">Add</button>
+						<a href="${pageContext.request.contextPath }/sound"
+							class="btn btn-outline-danger">返回</a>
+						<button type="submit" class="btn btn-outline-success">新增</button>
 					</div>
 				</form>
 			</div>
