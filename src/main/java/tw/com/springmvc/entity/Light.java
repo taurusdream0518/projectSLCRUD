@@ -43,7 +43,4 @@ public class Light {
 	public String toString() {
 		return "Light [id=" + id + ", name=" + name + ", quantity=" + quantity + "]";
 	}
-	
-	
-
 }

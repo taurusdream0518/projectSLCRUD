@@ -37,7 +37,6 @@ public class IndexController {
 		
 		m.addAttribute("title","Index");
 		return "index";
-	}		
-	
+	}			
 
 }

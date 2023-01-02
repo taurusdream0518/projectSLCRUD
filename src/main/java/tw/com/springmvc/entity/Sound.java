@@ -43,9 +43,5 @@ public class Sound {
 	@Override
 	public String toString() {
 		return "Sound [id=" + id + ", name=" + name + ", quantity=" + quantity + "]";
-	}
-	
-	
-	
-
+	}	
 }

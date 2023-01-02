@@ -10,8 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 import tw.com.springmvc.entity.Light;
 
 @Component
-public class LightDao extends FixtureDao<Light>{
-	
+public class LightDao extends FixtureDao<Light> {
+
 	@Override
 	public List<Light> getFixtureEntities() {
 		List<Light> lights = this.hibernateTemplate.loadAll(Light.class);
@@ -22,12 +22,11 @@ public class LightDao extends FixtureDao<Light>{
 	public void deleteFixtureEntity(Integer id) {
 		Light light = this.hibernateTemplate.load(Light.class, id);
 		this.hibernateTemplate.delete(light);
-		
+
 	}
-	
+	@Transactional
 	public Light getLight(Integer id) {
 		return this.hibernateTemplate.get(Light.class, id);
 	}
-	
-	
+
 }
